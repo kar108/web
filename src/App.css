@@ -1,38 +1,190 @@
+@font-face {
+  font-family: objective;
+  src: url(../public/Objectivity-Light.otf);
+}
+
+@font-face {
+  font-family: objective-med;
+  src: url(../public/Objectivity-Medium.otf);
+}
+
 .App {
   text-align: center;
+  font-family: objective;
+  background-color: #f4f6f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.MainContainer {
   min-height: 100vh;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.container1-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 0.4;
+}
+
+.container1-1-1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 10px;
+  font-weight: 800;
+  color: #9fa0a8;
+  cursor: pointer;
+}
+
+.container2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.w-800 {
+  font-weight: 800;
+}
+
+.f_20 {
+  font-size: 20;
+}
+
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  width: 100%;
+  height: 385px;
+}
+
+.subheader {
+  font-size: 60px;
+  font-family: "objective-med";
+  margin-bottom: 8;
+  text-align: left;
+  width: 48%
+}
+
+.subPart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.subheaderPart {
+  font-size: 60px;
+  font-family: "objective-med";
+  margin-bottom: 8;
+}
+
+.tagline {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  color: #9fa0a8
+}
+
+.img1 {
+  position: relative;
+  background-image: url('./assets/img1.png');
+}
+
+.img2 {
+  position: relative;
+  background-image: url('./assets/img2.jpg');
+}
+
+.img3 {
+  position: relative;
+  background-image: url('./assets/img3.jpg');
+}
+
+.grid3Content {
+
+  position: absolute;
   color: white;
+  bottom: 30px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.grid3text {
+
+  margin-left: 2%;
+  text-align: left;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 920px) {
+
+  .container1-1-1 {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container1-1 {
+    flex: none;
+  }
+
+  .container2 {
+    align-items: center;
+  }
+
+  .subheader {
+    text-align: center;
+    width: 100%
+  }
+
+  .subPart {
+    flex-direction: column-reverse;
+  }
+
+  .subheaderPart {
+    display: none;
+  }
+
+  .tagline {
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .container3 {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+  }
+
+  .img1 {
+    height: 350px
+  }
+
+  .img2 {
+    height: 350px
+  }
+
+  .img3 {
+    height: 350px
+  }
+
+
+  .grid3Content {
+    flex-direction: column;
+    left: 0px;
+  }
+
+  .grid3text{
+  text-align: center;
+  width: 100%;
   }
 }
